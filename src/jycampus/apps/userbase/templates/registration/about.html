@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>RoyalUI Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/base/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.css' %}">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.css' %}">
+</head>
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="index.html" class="navbar-brand"><img class="logo" src="{% static 'images/icon.png' %}" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://jesusyouth.org/" target="_blank">
+                  Jesus Youth
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/keralacampusministry/">
+                  Campus Ministry
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'mission' %}">
+                  Mission 2020
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'aboutus' %}">
+                  More Info
+                </a>
+              </li>
+              <li class="nav-item">
+               {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                {% else %}
+                  <a class="nav-link" href="{% url 'login' %}" target="_blank">Log in</a>
+
+             {% endif %}
+                            </li>
+
+
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+<body>
+
+  <div id="sliders">
+        <div class="full-width">
+          <!-- light slider -->
+          <div id="light-slider" class="carousel slide">
+            <div id="carousel-area">
+              <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+<!--                <ol class="carousel-indicators">-->
+<!--                  <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>-->
+<!--                  <li data-target="#carousel-slider" data-slide-to="1"></li>-->
+<!--                  <li data-target="#carousel-slider" data-slide-to="2"></li>-->
+<!--                </ol>-->
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img src="{% static 'images/slider/1.jpg' %}" alt="">
+                    <div class="carousel-caption">
+                      <div class="content">
+    <h1>Greetings in the name of Jesus.</h1>
+    <p>
+      With great joy of being immersed in the innumerable blessings that has been showered upon us, Kerala Campus
+      Ministry is letting you know about Kerala Campus Conference 2019 (KCC19).
+    </p>
+    <p>
+      Being a ministry that has played a key role in the movement in forming young missionaries, we assumed that we have
+      a need of gathering campus leaders from all over the state to celebrate and share happiness about our missionary
+      call to do the mission of Christ and also motivate others to do the same. This conference will be a gathering of
+      such kind of people who are doing mission by proclaiming Jesus in various campuses so that they can learn, feel
+      and teach different things each other which are helpful in their ministering.
+    </p>
+    <p> Bring your 5 loaves and 2 fish and let Him multiply those into abundance in our campuses.</p>
+
+    <p> See you there at Bharata Mata College, Thrikkakara on August 22 - 25, 2019.</p>
+
+  </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
+                  <i class="fa fa-chevron-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
+                  <i class="fa fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/base/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/template.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+</body>
+
+</html>

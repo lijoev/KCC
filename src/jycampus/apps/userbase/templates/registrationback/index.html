@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="slide.css">
+<link rel="stylesheet" href="Main.css" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="slide-section" style="height: 100vh;  ">
+        <div class="topnav" id="myTopnav" >
+            <a href="#home" class="active">Home</a>
+            <a href="http://jesusyouth.org/"target="_blank">Jesus Youth</a>
+            <a href="https://www.facebook.com/keralacampusministry/">Campus Ministry</a>
+            <a href="mission.html">Mission 2020</a>
+            <a href="about.html">More Info</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>  
+   
+      <div class="inner-nav">
+          <div style="display:flex;flex-direction:column;justify-content: center;">
+          <button class="tablink" onclick="openPage('Home', this, 'none')"id="defaultOpen">Login</button>
+          <button class="tablink" onclick="openPage('News', this, 'rgb(153, 6, 6)')" >Location</button>
+          <button class="tablink" onclick="openPage('Contact', this, 'rgb(153, 6, 6)')">Prayer</button>
+          <button class="tablink" onclick="openPage('About', this, 'rgb(153, 6, 6)')">News</button>
+          </div>
+          <div style="flex:1;">
+          <div id="Home" class="tabcontent" >
+            <form class="login">
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="pwd" placeholder="Enter Password" name="psw" required>
+                    
+                <button type="submit" onclick="openForm()">Login</button>
+              </div>
+            
+            </form>
+          </div>
+          
+          <div id="News" class="tabcontent">
+          <div>
+            <iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=bharat%20math%20college&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+												
+          </div>
+          </div>
+          
+          <div id="Contact" class="tabcontent">
+            <div class="prayer"><label for="">O Lord God, let the campuses be filled with young missionries<br/>
+              blessed with the sprit of the father, the love of the Christ<br/>
+             and anointing of the Holt Sprit .<br/>
+           Hail Mary,intercede for us</label></div>
+          </div>
+          
+          <div id="About" class="tabcontent">
+          <div class="about">
+            <h3>News</h3>
+            <p>Who we are and what we do.</p>
+            </div>
+          </div>
+          </div>
+          </div>
+      <img class="mySlides" src="./images/slide/1.jpg" style="width:100%;height: 100%;">
+      <img class="mySlides" src="./images/slide/2.jpg" style="width:100%;height: 100%;">
+      <!-- <img class="mySlides" src="./images/slide/3.jpg" style="width:100%"> -->
+    </div>
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container" id="label-hide">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" required>
+
+        <label for="bday"><b>DOB</b></label>
+        <input type="date" name="bday">
+        
+        <label for="Number"><b>Phone Number</b></label>
+        <input type="text" placeholder="Enter Phone Number" name="Number" required>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+        
+        <label for="college"><b>College</b></label>
+        <input type="text" placeholder="Enter College Name" name="colleges" required>
+        
+        <label for="Stream"><b>Stream</b></label>
+  <select name="stream">
+     <option value="TASC">Arts and Science</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Medical">Medical</option>
+    <option value="Nursing">Nursing</option>
+    <option value="Polytechnic">Polytechnic</option>
+    <option value="ITI">ITI</option>
+    <option value="Law">Law</option>
+    <option value="Hotel Manageent">Hotel Manageent</option>
+    <option value="Others">Others</option>
+    
+    
+  </select>
+   <label for="SubReagion"><b>SubReagion</b></label>
+   <select name="subreagion">
+   <option value="North">North</option>
+    <option value="Malabar">Malabar</option>
+    <option value="North central">North Central</option>
+    <option value="Central">Central</option>
+    <option value="Eastern">Eastern</option>
+    <option value="South central">South Central</option>
+    <option value="South">South</option>
+  </select>
+
+     <label for="Ztream"><b>Zone</b></label>
+   <select name="zone">
+    <option value="Kasargod">Kasargod</option>
+    <option value="Thalassery">Thalassery</option>
+    <option value="Manathaady">Manathaady</option>
+    <option value="Calicut">Calicut</option>
+     <option value="Palakkad">Palakkad</option>
+    <option value="Thrissur">Thrissur</option>
+    <option value="Irinjalakkuda">Irinjalakkuda</option>
+    <option value="Angamaly">Angamaly</option>
+     <option value="Ernakulam">Ernakulam</option>
+    <option value="Cherthala">Cherthala</option>
+    <option value="Alleppey">Alleppey</option>
+    <option value="Kothamangalam">Kothamangalam</option>
+     <option value="Idukki">Idukki</option>
+    <option value="Kattapana">Kattapana</option>
+    <option value="Pala">Pala</option>
+    <option value="Kanjirapally">Kanjirapally</option>
+    <option value="Kottayam">Kottayam</option>
+    <option value="Chenganasserry">Chenganasserry</option>
+     <option value="Punalur">Punalur</option>
+    <option value="Kollam">Kollam</option>
+    <option value="Trivandrum">Trivandrum</option>
+    <option value="Neyyatinkara">Neyyatinkara</option>
+  </select>
+  
+  
+
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+<script>
+  //slide carousel
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+function openForm() {
+  
+  if( document.getElementById("uname").value !="" && document.getElementById("pwd").value!="")
+  {
+    document.getElementById("myTopnav").style.display="none;"
+     document.getElementById("myForm").style.display = "block";
+     document.getElementById("uname").value="";
+     document.getElementById("pwd").value="";
+  
+     myTopnav
+  }
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myTopnav").style.display="block;"
+}
+
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e52a733c-ecbe-44dc-847d-0691419b511e" name="Default Changelist" comment="">
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/urls.py" beforeDir="false" afterPath="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/urls.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/views.py" beforeDir="false" afterPath="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/views.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/jycampus/settings/settings.py" beforeDir="false" afterPath="$USER_HOME$/workspace/jycampus/src/jycampus/settings/settings.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/jycampus/urls.py" beforeDir="false" afterPath="$USER_HOME$/workspace/jycampus/src/jycampus/urls.py" afterDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/css/maps/style.css.map" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/css/style.css" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/cssbck/Main.css" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/cssbck/slide.css" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Black.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Black.woff" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Black.woff2" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Bold.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Bold.woff" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Bold.woff2" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Light.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Light.woff" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Light.woff2" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Medium.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Medium.woff" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Medium.woff2" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Regular.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Regular.woff" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/fonts/Roboto/Roboto-Regular.woff2" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/auth/lockscreen-bg.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/auth/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/auth/register-bg.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/dashboard/shape-1.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/dashboard/shape-2.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/dashboard/shape-3.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/dashboard/shape-4.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face1.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face10.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face11.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face12.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face13.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face14.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face15.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face16.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face17.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face18.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face19.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face2.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face20.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face21.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face22.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face23.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face24.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face25.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face26.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face27.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face28.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face3.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face4.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face5.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face6.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face7.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face8.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/face9.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/index.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/index.png" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/logout.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/logout.png" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/faces/png2jpg.zip" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/favicon.png" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/logo-mini.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/images/logo.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/imagesback/slide/1.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/imagesback/slide/2.jpg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/chart.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/dashboard.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/documentation.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/file-upload.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/hoverable-collapse.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/off-canvas.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/tabs.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/template.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/todolist.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/js/tooltips.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/partials/_footer.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/partials/_navbar.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/partials/_sidebar.html" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_background.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_demo.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_fonts.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_footer.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_layouts.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_misc.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_reset.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_sidebar.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_typography.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/_vertical-wrapper.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_badges.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_bootstrap-progress.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_buttons.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_cards.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_checkbox-radio.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_forms.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_icons.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_lists.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_tables.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/components/_todo-list.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/landing-screens/_auth.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_animation.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_badges.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_blockqoute.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_cards.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/mixins/_misc.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/scss/style.scss" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/base/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/base/vendor.bundle.base.css" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/base/vendor.bundle.base.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/chart.js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/ti-icons/css/themify-icons.css" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/ti-icons/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/ti-icons/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/ti-icons/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$USER_HOME$/workspace/jycampus/src/static/vendors/ti-icons/fonts/themify.woff" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/static/lib/bootstrap/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/static/lib/bootstrap/js/bootstrap.bundle.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>1.jp</find>
+      <find>logo.png</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/workspace/jycampus" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/settings/settings.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/views.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/views.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/urls.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/urls.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/urls.py" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/static/lib/bootstrap/js/bootstrap.bundle.min.js" />
+        <option value="$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/templates/common/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="18" />
+    <option name="y" value="133" />
+    <option name="width" value="1221" />
+    <option name="height" value="635" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="userbase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheEvent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jycampus" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/workspace/jycampus" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e52a733c-ecbe-44dc-847d-0691419b511e" name="Default Changelist" comment="" />
+      <created>1562752569603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562752569603</updated>
+      <workItem from="1562752571046" duration="4514000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4514000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/contactform/contactform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="23" selection-start-line="24" selection-start-column="12" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/settings/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/templates/registration/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/static/lib/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/static/lib/bootstrap/js/bootstrap.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/userbase/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/jycampus/src/jycampus/apps/common/templates/common/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

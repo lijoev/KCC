@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page %}
+<div class="inner-nav">
+          <div style="display:flex;flex-direction:column;justify-content: center;">
+          <button class="tablink" onclick="openPage('Home', this, 'none')"id="defaultOpen">Login</button>
+          <button class="tablink" onclick="openPage('News', this, 'rgb(153, 6, 6)')" >Location</button>
+          <button class="tablink" onclick="openPage('Contact', this, 'rgb(153, 6, 6)')">Prayer</button>
+          <button class="tablink" onclick="openPage('About', this, 'rgb(153, 6, 6)')">News</button>
+          </div>
+          <div style="flex:1;">
+          <div id="Home" class="tabcontent" >
+             <form class="login" method="post">
+                      {% csrf_token %}
+                      <div class="container">
+                          <label for="uname"><b>Email</b></label>
+                          {{ login_form.email }}
+                          <label for="psw"><b>Password</b></label>
+                          <!--                <input type="password" id="pwd" placeholder="Enter Password" name="psw" required>-->
+                          {{ login_form.password }}
+                          <button type="submit" value='sign_in'>Login</button>
+                          <!--                <button type="submit" name='submit' class="btn btn-danger custbtn" value='sign_in'>-->
+
+                      </div>
+
+                  </form>
+          </div>
+
+          <div id="News" class="tabcontent">
+          <div>
+            <iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=bharat%20math%20college&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+          </div>
+          </div>
+
+          <div id="Contact" class="tabcontent">
+            <div class="prayer"><label for="">O Lord God, let the campuses be filled with young missionries<br/>
+              blessed with the sprit of the father, the love of the Christ<br/>
+             and anointing of the Holt Sprit .<br/>
+           Hail Mary,intercede for us</label></div>
+          </div>
+
+          <div id="About" class="tabcontent">
+          <div class="about">
+            <h3>News</h3>
+            <p>Who we are and what we do.</p>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+<script>
+  //slide carousel
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+function openForm() {
+
+  if( document.getElementById("uname").value !="" && document.getElementById("pwd").value!="")
+  {
+    document.getElementById("myTopnav").style.display="none;"
+     document.getElementById("myForm").style.display = "block";
+     document.getElementById("uname").value="";
+     document.getElementById("pwd").value="";
+
+     myTopnav
+  }
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("myTopnav").style.display="block;"
+}
+
+</script>
+{% endblock %}

@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page %}
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="inner-nav">
+<div class="container">
+	<div class="row">
+	  <form role="form" method="post">
+<!--          <div class="clearfix"></div>-->
+                      {% csrf_token %}
+
+
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="Name">Name</label>
+            {{ participants_form.name }}
+<!--            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
+        </div>
+          {% if participants_form.name.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.name.errors}}
+                </div>
+          {% endif %}
+
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputEmail">Email</label>
+            {{ participants_form.email }}
+        </div>
+
+        <div class="clearfix"></div>
+        {% if participants_form.email.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.email.errors}}
+                </div>
+          {% endif %}
+
+
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputPhoneNumber">PhoneNumber</label>
+            {{ participants_form.phoneNumber }}
+        </div>
+          {% if participants_form.phoneNumber.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.phoneNumber.errors}}
+                </div>
+          {% endif %}
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputCollege">College</label>
+            {{ participants_form.college }}
+        </div>
+
+        <div class="clearfix"></div>
+        {% if participants_form.college.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.college.errors}}
+                </div>
+          {% endif %}
+
+
+
+<!--        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">-->
+<!--            <label for="exampleInputDob">DOB</label>-->
+<!--            {{ participants_form.dob }}-->
+<!--            -->
+<!--        </div>-->
+
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputStream">DOB</label>
+            {{ participants_form.dob }}
+        </div>
+           {% if participants_form.dob.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.dob.errors}}
+                </div>
+          {% endif %}
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputStream">Stream</label>
+            {{ participants_form.stream }}
+        </div>
+
+        <div class="clearfix"></div>
+
+        {% if participants_form.stream.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.stream.errors}}
+                </div>
+          {% endif %}
+
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputSubRegion">SubReagion</label>
+            {{ participants_form.subregion }}
+        </div>
+          {% if participants_form.subregion.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.subregion.errors}}
+                </div>
+          {% endif %}
+        <div class="form-group col-xs-10 col-sm-4 col-md-2 col-lg-6">
+            <label for="exampleInputZone">Zone</label>
+            {{ participants_form.zone }}
+        </div>
+
+        <div class="clearfix"></div>
+            {% if participants_form.zone.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.zone.errors}}
+                </div>
+          {% endif %}
+
+        <div class="col-xs-10 col-sm-4 col-md-4 col-lg-12">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+
+    <br /><br />
+	</div>
+</div>
+    </div>
+{% endblock %}
+<script>
+  $(function () {
+    $("#id_dob").datetimepicker({
+      format: 'DD/MM/YYYY HH:mm',
+    });
+  });
+</script>
