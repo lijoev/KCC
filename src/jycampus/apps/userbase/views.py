@@ -1,9 +1,9 @@
 from __future__ import unicode_literals
 
 from django.contrib.auth import get_user_model
-from django.http import HttpResponse, JsonResponse
-
 from django.core.exceptions import ValidationError
+from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 try:
     from django.utils import simplejson as json
 except ImportError:
@@ -14,13 +14,8 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import redirect, get_object_or_404
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from .forms import LoginForm, ProfileForm, \
-    AddParticipantsForm
-from .models import Profile, Participants
-from django.contrib import messages
-from django.utils.http import urlsafe_base64_decode
-from django.core.paginator import Paginator
-from django.shortcuts import render_to_response
+from .forms import LoginForm, AddParticipantsForm
+from .models import Participants
 from django.contrib import messages
 
 User = get_user_model()
@@ -78,10 +73,10 @@ class LoginView(AnonymousRequiredMixin, TemplateView):
                 user = authenticate(email=email, password=raw_password)
                 print(user)
                 login(request, user)
-                return redirect('/home')
+                return redirect('/user/home')
             except:
                 messages.warning(request, 'Email And Password Does Not Match.')
-                return redirect('/login')
+                return redirect('/user/login')
         return render(request, self.template_name, context)
 
 
@@ -119,7 +114,7 @@ class ParticipantsView(TemplateView):
             sub_region = participants_form.cleaned_data.get('subregion')
             try:
                 participants_form.save()
-                return redirect('/home')
+                return redirect('/user/home')
             except ValidationError as e:
                 print(e)
                 pass
@@ -144,10 +139,20 @@ class ParticipantList(TemplateView):
         :param kwargs:
         :return:
         """
-        participants = Participants.objects.all()
+        participants_list = Participants.objects.all()
+        paginator = Paginator(participants_list, 4)
+        page = request.GET.get('page', 1)
+
+        try:
+            participants = paginator.page(page)
+        except PageNotAnInteger:
+            participants = paginator.page(1)
+        except EmptyPage:
+            participants = paginator.page(paginator.num_pages)
         context = {
             'participants': participants
         }
+        print(participants)
         return render(request, self.template_name, context)
 
 
@@ -161,7 +166,7 @@ def DeleteParticipant(request, pk):
     if participant_object:
 
         participant_object.delete()
-    return redirect("/home")
+    return redirect("/user/home")
 
 
 def editParticipant(request, pk):
@@ -169,7 +174,7 @@ def editParticipant(request, pk):
     participant_form = AddParticipantsForm(request.POST or None, instance=instance)
     if participant_form.is_valid():
         participant_form.save()
-        return redirect("/home")
+        return redirect("/user/home")
     return render(request, 'registration/adduser.html', {'participants_form': participant_form})
 
 
@@ -221,8 +226,20 @@ class HomeView(TemplateView):
         :param kwargs:
         :return:
         """
-        participants = Participants.objects.all()
+        participants_list = Participants.objects.all()
+        paginator = Paginator(participants_list, 10)
+        page = request.GET.get('page', 1)
+
+        try:
+            participants = paginator.page(page)
+        except PageNotAnInteger:
+            participants = paginator.page(1)
+        except EmptyPage:
+            participants = paginator.page(paginator.num_pages)
         context = {
             'participants': participants
         }
+        print(participants)
         return render(request, self.template_name, context)
+
+

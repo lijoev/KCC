@@ -21,7 +21,8 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', include('jycampus.apps.userbase.urls')),
+    url('', include('jycampus.apps.common.urls')),
+    url(r'^user/', include('jycampus.apps.userbase.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

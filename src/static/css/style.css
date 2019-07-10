@@ -21369,5 +21369,10 @@ dl li {
 .logo{
     height: 100px !important;
 }
+.page_li{
+padding-left: 20px;
+margin-right: 20px;
+background-color: white !important;
+}
 
 /*# sourceMappingURL=maps/style.css.map */

@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jycampus.apps.userbase',
+    'jycampus.apps.common',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -142,8 +144,8 @@ USE_TZ = True
 
 
 
-LOGIN_URL = '/login'
-LOGIN_REDIRECT_URL = '/home'
+LOGIN_URL = '/user/login'
+LOGIN_REDIRECT_URL = '/user/home'
 
 LOGGING = {
     'version': 1,
