@@ -105,9 +105,11 @@ WSGI_APPLICATION = 'jycampus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+        'NAME': 'kcc',
+        'USER': 'kccuser',
+        'PASSWORD': 'kcc@123',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
