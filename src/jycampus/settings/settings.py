@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': 'kcc',
         'USER': 'kccuser',
         'PASSWORD': 'kcc@123',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'HOST': '0.0.0.0',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }

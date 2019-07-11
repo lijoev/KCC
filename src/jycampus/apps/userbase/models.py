@@ -127,7 +127,7 @@ class Participants(models.Model):
     """
     name = models.TextField(_('name'), help_text=_('Name of the Participant'))
     email = models.EmailField(_('email address'), blank=False, unique=True, max_length=254)
-    phoneNumber = models.IntegerField(_('phone number'), blank=False, unique=True,)
+    phoneNumber = models.TextField(_('phone number'), blank=False, unique=False,)
     college = models.TextField(_('college'), help_text=_('College of the participant'))
     stream = models.TextField(_('stream'), help_text=_('Stream of the Participant'))
     subregion = models.TextField(_('subregion'), help_text=_('Subregion of the Participant'))
