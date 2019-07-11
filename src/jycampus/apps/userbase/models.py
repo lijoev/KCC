@@ -37,7 +37,7 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password, **extra_fields):
-        u = self.create_user(email, password, **extra_fields)
+        u = self.create_user(email, password=password, **extra_fields)
         u.is_staff = True
         u.is_active = True
         u.is_superuser = True
@@ -58,6 +58,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(_('last name'), max_length=30, blank=True)
     is_staff = models.BooleanField(_('staff status'), default=False,
                                    help_text=_('Designates whether the user can log into this admin '
+                                               'site.'))
+    is_admin = models.BooleanField(_('admin status'), default=False,
+                                   help_text=_('Designates whether the user is admin '
                                                'site.'))
     is_active = models.BooleanField(_('active'), default=True,
                                     help_text=_('Designates whether this user should be treated as '
@@ -133,6 +136,7 @@ class Participants(models.Model):
     subregion = models.TextField(_('subregion'), help_text=_('Subregion of the Participant'))
     zone = models.TextField(_('zone'), help_text=_('Zone of the Participant'))
     dob = models.DateField(_('date of birth'),  blank=True, null=True,  help_text=_('event date'))
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = _('Participant')
