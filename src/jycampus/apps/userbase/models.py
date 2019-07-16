@@ -136,7 +136,10 @@ class Participants(models.Model):
     subregion = models.TextField(_('subregion'), help_text=_('Subregion of the Participant'))
     zone = models.TextField(_('zone'), help_text=_('Zone of the Participant'))
     dob = models.DateField(_('date of birth'),  blank=True, null=True,  help_text=_('event date'))
+    gender = models.TextField(_('gender'), blank=True, null=True, help_text=_('Gender of the Participant'))
+    fee_status = models.TextField(_('fee status'), blank=True, null=True, help_text=_('Fee status of the Participant'))
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
+    amount = models.TextField(_('amount'), blank=True, null=True, help_text=_('Amount paid by the Participant'))
 
     class Meta:
         verbose_name = _('Participant')
