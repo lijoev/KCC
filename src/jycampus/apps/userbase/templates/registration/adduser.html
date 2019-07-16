@@ -189,6 +189,49 @@
           {% endif %}
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Gender</label>
+                          <div class="col-sm-9">
+                            {{ participants_form.gender }}
+                          </div>
+                        </div>
+                        {% if participants_form.gender.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.gender.errors}}
+                </div>
+          {% endif %}
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Fee Status</label>
+                          <div class="col-sm-9">
+                            {{ participants_form.fee_status }}
+                          </div>
+
+                        </div>
+                        {% if participants_form.fee_status.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.fee_status.errors}}
+                </div>
+          {% endif %}
+                      </div>
+                        <div id="amount_id" style="display: none;" class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Amount</label>
+                          <div class="col-sm-6">
+                            {{ participants_form.amount }}
+                          </div>
+
+                        </div>
+                        {% if participants_form.amount.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.amount.errors}}
+                </div>
+          {% endif %}
+                      </div>
+                    </div>
 
                     <div class="row">
                       <div class="col-md-6">
@@ -257,6 +300,15 @@
   <!-- Custom js for this page-->
   <script src="{% static 'js/file-upload.js' %}"></script>
   <!-- End custom js for this page-->
+<script>
+    function yesnoCheck(that) {
+    if (that.value == "partially") {
+        document.getElementById("amount_id").style.display = "block";
+    } else {
+        document.getElementById("amount_id").style.display = "none";
+    }
+}
+</script>
 </body>
 
 </html>
