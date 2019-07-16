@@ -51,6 +51,14 @@ class AddParticipantsForm(forms.ModelForm):
                     ('Chenganasserry', 'Chenganasserry'), ('Punalur', 'Punalur'),
                     ('Kollam', 'Kollam'), ('Trivandrum', 'Trivandrum'), ('Neyyatinkara', 'Neyyatinkara'),)
 
+    GENDER_CHOICES = (('male', 'Male'), ('female', 'Female'))
+    FEE_STATUS_CHOICES = (
+        ('None', 'Select Fee Status'),
+        ('paide', 'Paid'),
+        ('not-paid', 'Not Paid'),
+        ('partially', 'Partially Paid'),
+    )
+
     name = forms.CharField(max_length=30,
                                 widget=forms.TextInput(attrs={'class': "form-control"}))
 
@@ -62,10 +70,16 @@ class AddParticipantsForm(forms.ModelForm):
     stream = forms.CharField(widget=forms.Select(choices=STREAM_CHOICES, attrs={'class': "form-control"}))
     subregion = forms.CharField(widget=forms.Select(choices=SUBREGION_CHOICES, attrs={'class': "form-control"}))
     zone = forms.CharField(widget=forms.Select(choices=ZONE_CHOICES, attrs={'class': "form-control"}))
+    gender = forms.CharField(widget=forms.Select(choices=GENDER_CHOICES, attrs={'class': "form-control"}))
+    fee_status = forms.CharField(widget=forms.Select(choices=FEE_STATUS_CHOICES, attrs={'class': "form-control",
+                                                                                        'onchange': "yesnoCheck(this);"}))
+    amount = forms.CharField(max_length=30,
+                                widget=forms.TextInput(attrs={'class': "form-control"}))
 
     class Meta:
         model = Participants
-        fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone')
+        fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone',
+                  'gender', 'fee_status', 'amount')
 
 
 

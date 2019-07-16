@@ -33,7 +33,7 @@ SECRET_KEY = 'tlzk=pndfdei8^7dzmus5^wdxq7hu44*xr1i$(jh(#j1rfm8b3z*+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-3-16-22-32.us-east-2.compute.amazonaws.com', 'localhost']
+ALLOWED_HOSTS = ['ec2-3-16-22-32.us-east-2.compute.amazonaws.com','3.130.206.118','keralacampusministry.org', 'localhost']
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT_DIR, 'static')
 
