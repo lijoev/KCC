@@ -111,9 +111,10 @@ class ParticipantsView(TemplateView):
         participants_form = self.participants_form(request.POST)
 
         if participants_form.is_valid():
-            sub_region = participants_form.cleaned_data.get('subregion')
+            participantsobject = participants_form.save(commit=False)
+            participantsobject.user = request.user
             try:
-                participants_form.save()
+                participantsobject.save()
                 return redirect('/user/home')
             except ValidationError as e:
                 print(e)
@@ -226,7 +227,8 @@ class HomeView(TemplateView):
         :param kwargs:
         :return:
         """
-        participants_list = Participants.objects.all()
+        print(request.user)
+        participants_list = Participants.objects.filter(user_id = request.user.id).all()
         paginator = Paginator(participants_list, 10)
         page = request.GET.get('page', 1)
 
