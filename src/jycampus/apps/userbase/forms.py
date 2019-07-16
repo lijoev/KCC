@@ -71,16 +71,19 @@ class AddParticipantsForm(forms.ModelForm):
     subregion = forms.CharField(widget=forms.Select(choices=SUBREGION_CHOICES, attrs={'class': "form-control"}))
     zone = forms.CharField(widget=forms.Select(choices=ZONE_CHOICES, attrs={'class': "form-control"}))
     gender = forms.CharField(widget=forms.Select(choices=GENDER_CHOICES, attrs={'class': "form-control"}))
-    fee_status = forms.CharField(widget=forms.Select(choices=FEE_STATUS_CHOICES, attrs={'class': "form-control",
-                                                                                        'onchange': "yesnoCheck(this);"}))
-    amount = forms.CharField(max_length=30,
+    fee_status = forms.CharField(required=False, widget=forms.Select(choices=FEE_STATUS_CHOICES, attrs={'class': "form-control",
+                                                                                        'onchange': "yesnoCheck(this)"}))
+    amount = forms.CharField(required=False, max_length=30,
                                 widget=forms.TextInput(attrs={'class': "form-control"}))
+    responsible_person = forms.CharField(required=False, max_length=30,
+                             widget=forms.TextInput(attrs={'class': "form-control"}))
+    responsible_person_contact = forms.CharField(required=False, max_length=30,
+                             widget=forms.TextInput(attrs={'class': "form-control"}))
 
     class Meta:
         model = Participants
         fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone',
-                  'gender', 'fee_status', 'amount')
-
+                  'gender', 'fee_status', 'amount', 'responsible_person', 'responsible_person_contact')
 
 
 class ProfileForm(forms.ModelForm):

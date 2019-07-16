@@ -138,8 +138,13 @@ class Participants(models.Model):
     dob = models.DateField(_('date of birth'),  blank=True, null=True,  help_text=_('event date'))
     gender = models.TextField(_('gender'), blank=True, null=True, help_text=_('Gender of the Participant'))
     fee_status = models.TextField(_('fee status'), blank=True, null=True, help_text=_('Fee status of the Participant'))
-    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     amount = models.TextField(_('amount'), blank=True, null=True, help_text=_('Amount paid by the Participant'))
+    responsible_person = models.TextField(_('responsible person'), blank=True, null=True, 
+                                          help_text=_('Responsible Person of the Participant'))
+    responsible_person_contact = models.TextField(_('responsible person contact'), blank=True, null=True, 
+                                                  help_text=_('Contact of the Responsible Person of the Participant'))
+
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = _('Participant')
