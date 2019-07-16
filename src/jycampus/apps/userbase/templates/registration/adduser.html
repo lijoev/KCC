@@ -160,6 +160,37 @@
           {% endif %}
                       </div>
                     </div>
+                      <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Responsible Person</label>
+                          <div class="col-sm-9">
+                            {{ participants_form.responsible_person }}
+                          </div>
+                        </div>
+                        {% if participants_form.responsible_person.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.responsible_person.errors}}
+                </div>
+          {% endif %}
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Responsible Person Contact</label>
+                          <div class="col-sm-9">
+                            {{ participants_form.responsible_person_contact }}
+                          </div>
+
+                        </div>
+                        {% if participants_form.responsible_person_contact.errors %}
+                <div class="alert alert-info">
+                    {{participants_form.responsible_person_contact.errors}}
+                </div>
+          {% endif %}
+                      </div>
+
+
+                    </div>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
@@ -264,7 +295,7 @@
                     </div>
                     <div class="row">
                 <div class="col-md-12">
-                      <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" value='sign_in'>Submit</button>
+                      <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" value=''>Submit</button>
                     </div>
                     </div>
                   </form>
@@ -308,6 +339,16 @@
         document.getElementById("amount_id").style.display = "none";
     }
 }
+
+
+var selectElem = document.getElementById('id_fee_status')
+var strUser = selectElem.options[selectElem.selectedIndex].value;
+if (strUser == "partially") {
+    document.getElementById("amount_id").style.display = "block";
+} else {
+    document.getElementById("amount_id").style.display = "none";
+}
+
 </script>
 </body>
 
