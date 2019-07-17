@@ -31,6 +31,12 @@ def export_xls(modeladmin, request, queryset):
         (u"Stream", 8000),
         (u"Subregion", 8000),
         (u"Zone", 8000),
+        (u"dob", 8000),
+        (u"gender", 8000),
+        (u"fee_status", 8000),
+        (u"amount", 8000),
+        (u"responsible_person", 8000),
+        (u"responsible_person_contact", 8000),
         # (u"Dob", 8000),
     ]
 
@@ -56,7 +62,12 @@ def export_xls(modeladmin, request, queryset):
             obj.stream,
             obj.subregion,
             obj.zone,
-            # obj.dob,
+            obj.dob,
+            obj.gender,
+            obj.fee_status,
+            obj.amount,
+            obj.responsible_person,
+            obj.responsible_person_contact,
         ]
         for col_num in xrange(len(row)):
             ws.write(row_num, col_num, row[col_num], font_style)
@@ -68,10 +79,70 @@ def export_xls(modeladmin, request, queryset):
 export_xls.short_description = u"Export XLS"
 
 
+class AddParticipantsForm(forms.ModelForm):
+    """
+    sign up form which deals with signup process.
+    all fields are must fields
+    """
+    YEARS = [x for x in range(1940, 2021)]
+    STREAM_CHOICES = (('None', 'Select Stream'), ('TASC', 'Arts and Science'), ('Engineering', 'Engineering'),('Medical', 'Medical'),
+               ('Nursing', 'Nursing'), ('Polytechnic', 'Polytechnic'),
+               ('ITI', 'ITI'), ('Law', 'Law'), ('Hotel Management', 'Hotel Management'), ('Others', 'Others'))
+    SUBREGION_CHOICES = (('None', 'Select Subregion'), ('North', 'North'), ('Malabar', 'Malabar'), ('North central', 'North central'),
+                      ('Central', 'Central'), ('Eastern', 'Eastern'),
+                      ('South central', 'South central'), ('South', 'South'),)
+    ZONE_CHOICES = (('None', 'Select Zone'), ('Kasargod', 'Kasargod'), ('Thalassery', 'Thalassery'), ('Manathaady', 'Manathaady'),
+                         ('Calicut', 'Calicut'), ('Palakkad', 'Palakkad'),
+                         ('Thrissur', 'Thrissur'), ('Irinjalakkuda', 'Irinjalakkuda'),
+                    ('Angamaly', 'Angamaly'), ('Ernakulam', 'Ernakulam'),
+                    ('Cherthala', 'Cherthala'), ('Alleppey', 'Alleppey'),
+                    ('Kothamangalam', 'Kothamangalam'), ('Idukki', 'Idukki'),
+                    ('Kattapana', 'Kattapana'), ('Pala', 'Pala'),
+                    ('Kanjirapally', 'Kanjirapally'),
+                    ('Kottayam', 'Kottayam'),
+                    ('Chenganasserry', 'Chenganasserry'), ('Punalur', 'Punalur'),
+                    ('Kollam', 'Kollam'), ('Trivandrum', 'Trivandrum'), ('Neyyatinkara', 'Neyyatinkara'),)
+
+    GENDER_CHOICES = (('male', 'Male'), ('female', 'Female'))
+    FEE_STATUS_CHOICES = (
+        ('None', 'Select Fee Status'),
+        ('paide', 'Paid'),
+        ('not-paid', 'Not Paid'),
+        ('partially', 'Partially Paid'),
+    )
+
+    name = forms.CharField(max_length=30,
+                                widget=forms.TextInput(attrs={'class': "form-control"}))
+
+    dob = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control", 'placeholder': "YYYY-MM-DD"}))
+    email = forms.EmailField(max_length=100, help_text='Required. Inform a valid email address.',
+                             widget=forms.EmailInput(attrs={'class': "form-control"}))
+    phoneNumber = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control"}))
+    college = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control"}))
+    stream = forms.CharField(widget=forms.Select(choices=STREAM_CHOICES, attrs={'class': "form-control"}))
+    subregion = forms.CharField(widget=forms.Select(choices=SUBREGION_CHOICES, attrs={'class': "form-control"}))
+    zone = forms.CharField(widget=forms.Select(choices=ZONE_CHOICES, attrs={'class': "form-control"}))
+    gender = forms.CharField(widget=forms.Select(choices=GENDER_CHOICES, attrs={'class': "form-control"}))
+    fee_status = forms.CharField(required=False, widget=forms.Select(choices=FEE_STATUS_CHOICES, attrs={'class': "form-control",
+                                                                                        'onchange': "yesnoCheck(this)"}))
+    amount = forms.CharField(required=False, max_length=30,
+                                widget=forms.TextInput(attrs={'class': "form-control"}))
+    responsible_person = forms.CharField(required=False, max_length=30,
+                             widget=forms.TextInput(attrs={'class': "form-control"}))
+    responsible_person_contact = forms.CharField(required=False, max_length=30,
+                             widget=forms.TextInput(attrs={'class': "form-control"}))
+
+    class Meta:
+        model = Participants
+        fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone',
+                  'gender', 'fee_status', 'amount', 'responsible_person', 'responsible_person_contact', 'user')
+
+
 class ParticipantsAdmin(admin.ModelAdmin):
     list_display = ('name', 'email','phoneNumber', 'college', 'stream', 'subregion', 'zone', 'dob')
-    list_filter = ('name', 'email', 'college', 'stream', 'subregion', 'zone')
+    list_filter = ('name', 'email', 'college', 'stream', 'subregion', 'zone', 'gender', 'fee_status', 'responsible_person')
     search_fields = ('name',)
+    form = AddParticipantsForm
     actions = [export_xls]
 
 
