@@ -5,6 +5,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.forms import SetPasswordForm
+from pip._vendor.pytoml.writer import long
+
 from .models import Profile, Participants
 from datetime import datetime
 LOG = logging.getLogger('myStock.%s' % __name__)
@@ -39,7 +41,7 @@ class AddParticipantsForm(forms.ModelForm):
     SUBREGION_CHOICES = (('None', 'Select Subregion'), ('North', 'North'), ('Malabar', 'Malabar'), ('North central', 'North central'),
                       ('Central', 'Central'), ('Eastern', 'Eastern'),
                       ('South central', 'South central'), ('South', 'South'),)
-    ZONE_CHOICES = (('None', 'Select Zone'), ('Kasargod', 'Kasargod'), ('Thalassery', 'Thalassery'), ('Manathaady', 'Manathaady'),
+    ZONE_CHOICES = (('None', 'Select Zone'), ('Kannoor', 'Kannoor'),  ('Kasargod', 'Kasargod'), ('Thalassery', 'Thalassery'), ('Manathaady', 'Manathaady'),
                          ('Calicut', 'Calicut'), ('Palakkad', 'Palakkad'),
                          ('Thrissur', 'Thrissur'), ('Irinjalakkuda', 'Irinjalakkuda'),
                     ('Angamaly', 'Angamaly'), ('Ernakulam', 'Ernakulam'),
@@ -84,6 +86,34 @@ class AddParticipantsForm(forms.ModelForm):
         model = Participants
         fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone',
                   'gender', 'fee_status', 'amount', 'responsible_person', 'responsible_person_contact')
+
+    def clean_phoneNumber(self):
+        participant_phone = self.cleaned_data.get('phoneNumber', None)
+        try:
+            if long(participant_phone) and not participant_phone.isalpha():
+                min_length = 10
+                max_length = 13
+                ph_length = str(participant_phone)
+                if len(ph_length) < min_length or len(ph_length) > max_length:
+                    raise ValidationError('Phone number length not valid')
+
+        except (ValueError, TypeError):
+            raise ValidationError('Please enter a valid phone number')
+        return participant_phone
+
+    def clean_responsible_person_contact(self):
+        responsible_person_contact = self.cleaned_data.get('responsible_person_contact', None)
+        try:
+            if long(responsible_person_contact) and not responsible_person_contact.isalpha():
+                min_length = 10
+                max_length = 13
+                ph_length = str(responsible_person_contact)
+                if len(ph_length) < min_length or len(ph_length) > max_length:
+                    raise ValidationError('Phone number length not valid')
+
+        except (ValueError, TypeError):
+            raise ValidationError('Please enter a valid phone number')
+        return responsible_person_contact
 
 
 class ProfileForm(forms.ModelForm):
