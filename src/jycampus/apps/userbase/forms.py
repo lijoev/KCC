@@ -56,7 +56,7 @@ class AddParticipantsForm(forms.ModelForm):
     GENDER_CHOICES = (('male', 'Male'), ('female', 'Female'))
     FEE_STATUS_CHOICES = (
         ('None', 'Select Fee Status'),
-        ('paide', 'Paid'),
+        ('paid', 'Paid'),
         ('not-paid', 'Not Paid'),
         ('partially', 'Partially Paid'),
     )
@@ -67,7 +67,7 @@ class AddParticipantsForm(forms.ModelForm):
     dob = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control", 'placeholder': "YYYY-MM-DD"}))
     email = forms.EmailField(max_length=100, help_text='Required. Inform a valid email address.',
                              widget=forms.EmailInput(attrs={'class': "form-control"}))
-    phoneNumber = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control"}))
+    phoneNumber = forms.CharField(max_length=13, widget=forms.TextInput(attrs={'class': "form-control"}))
     college = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'class': "form-control"}))
     stream = forms.CharField(widget=forms.Select(choices=STREAM_CHOICES, attrs={'class': "form-control"}))
     subregion = forms.CharField(widget=forms.Select(choices=SUBREGION_CHOICES, attrs={'class': "form-control"}))

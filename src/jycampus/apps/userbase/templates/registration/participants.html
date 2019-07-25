@@ -114,6 +114,7 @@
                                         <th class="table-head">Stream</th>
                                         <th class="table-head ">Subregion</th>
                                         <th class="table-head ">DOB</th>
+                                        <th class="table-head ">Fee Status</th>
                                         <th class="table-head ">PhoneNumber</th>
                                         <th>Edit</th>
 
@@ -130,6 +131,15 @@
                                         <td class="">{{ participant.stream }}</td>
                                         <td class="">{{ participant.subregion }}</td>
                                         <td class="">{{ participant.dob }}</td>
+                                        {% if participant.fee_status == 'paid' %}
+                                            <td style="color: green" class="">{{ participant.fee_status }}</td>
+
+                                        {% elif participant.fee_status == 'partially' %}
+                                            <td style="color: blue" class="">{{ participant.fee_status }}</td>
+
+                                        {% else %}
+                                            <td style="color: red" class="">{{ participant.fee_status }}</td>
+                                        {% endif %}
                                         <td class="">{{ participant.phoneNumber }}</td>
                                         <!--<a href=""><td><button class="btn btn-primary btn-xs"><i class="fa fa-edit" aria-hidden="true"></i></button></td></a>-->
                                         <td><a class="btn btn-primary btn-xs" href="{% url 'edit_participant' participant.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>

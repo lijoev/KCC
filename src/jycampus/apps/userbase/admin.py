@@ -106,7 +106,7 @@ class AddParticipantsForm(forms.ModelForm):
     GENDER_CHOICES = (('male', 'Male'), ('female', 'Female'))
     FEE_STATUS_CHOICES = (
         ('None', 'Select Fee Status'),
-        ('paide', 'Paid'),
+        ('paid', 'Paid'),
         ('not-paid', 'Not Paid'),
         ('partially', 'Partially Paid'),
     )
