@@ -21378,3 +21378,20 @@ background-color: white !important;
     list-style: none !important;
 }
 /*# sourceMappingURL=maps/style.css.map */
+@media only screen and (min-width: 360px)  {.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group {
+    padding: 0px 0.1rem !important;
+    width: 219px !important;
+    border: 1px solid #c9ccd7;
+    border-radius: 2rem;
+} }
+
+
+
+
+/*pxl2 and 1 iphon6/7*/
+@media only screen and (min-width: 411px)  {.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group {
+    padding: 0px 1.1rem !important;
+    width: 268px !important;
+    border: 1px solid #c9ccd7;
+    border-radius: 2rem;
+}}
