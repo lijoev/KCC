@@ -4,6 +4,8 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
+
 try:
     from django.utils import simplejson as json
 except ImportError:
@@ -227,7 +229,6 @@ class HomeView(TemplateView):
         :param kwargs:
         :return:
         """
-        print(request.user)
         participants_list = Participants.objects.filter(user_id = request.user.id).all()
         paginator = Paginator(participants_list, 10)
         page = request.GET.get('page', 1)
@@ -241,7 +242,45 @@ class HomeView(TemplateView):
         context = {
             'participants': participants
         }
-        print(participants)
         return render(request, self.template_name, context)
+
+    def post(self, request):
+        """
+
+        :param request:
+        :return:
+        """
+        search_key = request.POST['search']
+
+        participants_list = Participants.objects.filter(user_id=request.user.id).filter(Q(name__contains=search_key)
+                                                                                        | Q(email__contains=search_key)
+                                                                                        | Q(college__contains=search_key)
+                                                                                        | Q(zone__contains=search_key)
+                                                                                        | Q(subregion__contains=search_key)
+                                                                                        | Q(stream__contains=search_key)
+                                                                                        | Q(fee_status__contains=search_key)
+                                                                                        | Q(gender__contains=search_key)
+                                                                                        )
+        if participants_list:
+
+            paginator = Paginator(participants_list, 10)
+            page = request.GET.get('page', 1)
+
+            try:
+                participants = paginator.page(page)
+            except PageNotAnInteger:
+                participants = paginator.page(1)
+            except EmptyPage:
+                participants = paginator.page(paginator.num_pages)
+            context = {
+                'participants': participants
+            }
+            return render(request, self.template_name, context)
+        else:
+            context = {
+                'participants': None
+            }
+            return render(request, self.template_name, context)
+
 
 

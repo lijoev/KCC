@@ -41,7 +41,11 @@
                   <i class="ti-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+                <form action="{% url 'home' %}" method="post">
+                    {% csrf_token %}
+                    <!--<input name="q" type="text" placeholder="Search...">-->
+                    <input name="search" type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+                </form>
             </div>
           </li>
         </ul>
@@ -74,7 +78,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a href="{% url 'home' %}" class="nav-link" href="index.html">
+            <a href="{% url 'home' %}" class="nav-link">
               <i class="ti-shield menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -86,7 +90,7 @@
 <!--            </a>-->
 <!--          </li>-->
           <li class="nav-item">
-            <a href="{% url 'participants' %}" class="nav-link" href="pages/forms/basic_elements.html">
+            <a href="{% url 'participants' %}" class="nav-link">
               <i class="ti-layout-list-post menu-icon"></i>
               <span class="menu-title">Add Participants</span>
             </a>
@@ -102,7 +106,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Participants</h4>
-
+                    {% if participants %}
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>
@@ -122,6 +126,7 @@
                         </tr>
                       </thead>
                       <tbody>
+
                       {% for participant in participants %}
                       <tr>
                           <td class="">{{ participant.name }}</td>
@@ -146,6 +151,7 @@
                                         <td><a class="btn btn-danger btn-xs" href="{% url 'delete_participant' participant.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                         </tr>
                        {% endfor %}
+
                       </tbody>
                     </table>
                     {% if participants.has_other_pages %}
@@ -170,6 +176,11 @@
   </ul>
 {% endif %}
                   </div>
+                    {%else%}
+                        <div class="alert alert-info">
+                        No participants Found
+                        </div>
+                    {%endif%}
                 </div>
               </div>
             </div>
