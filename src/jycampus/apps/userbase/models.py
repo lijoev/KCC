@@ -143,12 +143,17 @@ class Participants(models.Model):
                                           help_text=_('Responsible Person of the Participant'))
     responsible_person_contact = models.TextField(_('responsible person contact'), blank=True, null=True, 
                                                   help_text=_('Contact of the Responsible Person of the Participant'))
+    is_volunteer = models.BooleanField(default=True)
+    ministry = models.TextField(_('ministry of the volunteer'), blank=True, null=True,
+                                          help_text=_('Ministry of the volunteer'))
+    is_participant = models.BooleanField(default=True)
 
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = _('Participant')
         verbose_name_plural = _('Participants')
+
 
     def __str__(self):
         return self.email

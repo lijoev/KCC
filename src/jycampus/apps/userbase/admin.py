@@ -110,6 +110,41 @@ class AddParticipantsForm(forms.ModelForm):
         ('not-paid', 'Not Paid'),
         ('partially', 'Partially Paid'),
     )
+    MINISTRY_CHOICES = (
+        ('None', 'Select Ministry'),
+        ('media_team', 'Media team'),
+        ('finance_team', 'Finance team'),
+        ('volunteer_captain', 'Volunteers captain'),
+        ('mobilization', 'Mobilization'),
+        ('travel_desk', 'Travel desk'),
+        ('registration', 'Registration'),
+        ('transport', 'Transport'),
+        ('local_arrangement ', 'Local arrangement '),
+        ('hall_arrangement', 'Hall arrangement'),
+        ('priests_and_religious', 'Priests & Religious'),
+        ('resource_caring', 'Resource Caring'),
+        ('office', 'Office'),
+        ('medical_care', 'Medical care'),
+        ('outdoor_ministries', 'Outdoor Ministries'),
+        ('decorations_creative_welcoming', 'Decorations & creative welcoming'),
+        ('merchandise', 'Merchandise'),
+        ('stall', 'Stall'),
+        ('radio', 'Radio'),
+        ('programme_team', 'Programme Team'),
+        ('music_ministry', 'Music Ministry'),
+        ('audiovisual_ministry', 'Audiovisual Ministry'),
+        ('liturgy', 'Liturgy'),
+        ('intersession', 'Intersession'),
+        ('accommodation', 'Accommodation'),
+        ('light_and_sound', 'Light and Sound'),
+        ('electricity_and_plumbing', 'Electricity & Plumbing'),
+        ('venue_incharge_and_reset', 'Venue Incharge & Reset'),
+        ('kitchen_and_food_distribution', 'Kitchen & Food Distribution'),
+        ('food_purchase', 'Food Purchase'),
+        ('cooking', 'Cooking'),
+        ('drinking_water', 'Drinking Water'),
+        ('cleaning', 'Cleaning'),
+    )
 
     name = forms.CharField(max_length=30,
                                 widget=forms.TextInput(attrs={'class': "form-control"}))
@@ -132,10 +167,15 @@ class AddParticipantsForm(forms.ModelForm):
     responsible_person_contact = forms.CharField(required=False, max_length=30,
                              widget=forms.TextInput(attrs={'class': "form-control"}))
 
+    is_volunteer = forms.BooleanField(initial=False, required=False,)
+    ministry = forms.CharField(widget=forms.Select(choices=MINISTRY_CHOICES, attrs={'class': "form-control"}))
+    is_participant = forms.BooleanField(initial=False, required=False,)
+
     class Meta:
         model = Participants
         fields = ('name', 'dob', 'email', 'phoneNumber', 'college', 'stream', 'subregion', 'zone',
-                  'gender', 'fee_status', 'amount', 'responsible_person', 'responsible_person_contact', 'user')
+                  'gender', 'fee_status', 'amount', 'responsible_person', 'responsible_person_contact', 'is_volunteer',
+                  'is_participant', 'ministry', 'user')
 
 
 class ParticipantsAdmin(admin.ModelAdmin):
