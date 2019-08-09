@@ -143,10 +143,10 @@ class Participants(models.Model):
                                           help_text=_('Responsible Person of the Participant'))
     responsible_person_contact = models.TextField(_('responsible person contact'), blank=True, null=True, 
                                                   help_text=_('Contact of the Responsible Person of the Participant'))
-    is_volunteer = models.BooleanField(default=True)
+    is_volunteer = models.BooleanField()
     ministry = models.TextField(_('ministry of the volunteer'), blank=True, null=True,
                                           help_text=_('Ministry of the volunteer'))
-    is_participant = models.BooleanField(default=True)
+    is_participant = models.BooleanField()
 
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
 
