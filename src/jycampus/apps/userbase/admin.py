@@ -180,7 +180,8 @@ class AddParticipantsForm(forms.ModelForm):
 
 class ParticipantsAdmin(admin.ModelAdmin):
     list_display = ('name', 'email','phoneNumber', 'college', 'stream', 'subregion', 'zone', 'dob')
-    list_filter = ('college', 'stream', 'subregion', 'zone', 'gender', 'fee_status', 'responsible_person')
+    list_filter = ('college', 'stream', 'subregion', 'zone', 'gender', 'fee_status', 'responsible_person',
+                   'is_volunteer', 'is_participant', 'ministry')
     search_fields = ('name',)
     form = AddParticipantsForm
     actions = [export_xls]
