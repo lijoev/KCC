@@ -1,4 +1,4 @@
-Django==1.11
+Django==1.11.28
 django-braces==1.13.0
 gunicorn==19.9.0
 django-import-export==1.2.0
